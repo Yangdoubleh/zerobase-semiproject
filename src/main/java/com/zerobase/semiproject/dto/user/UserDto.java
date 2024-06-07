@@ -1,4 +1,4 @@
-package com.zerobase.semiproject.user.dto;
+package com.zerobase.semiproject.dto.user;
 
 public class UserDto {
     private String loginId;

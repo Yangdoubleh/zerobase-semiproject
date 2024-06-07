@@ -1,6 +1,6 @@
 package com.zerobase.semiproject.user.service;
 
-import com.zerobase.semiproject.user.dto.UserDto;
+import com.zerobase.semiproject.dto.user.UserDto;
 import com.zerobase.semiproject.user.entity.User;
 import com.zerobase.semiproject.user.exception.UserException;
 import com.zerobase.semiproject.user.exception.constant.UserExceptionCode;
