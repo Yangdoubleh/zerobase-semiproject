@@ -8,3 +8,8 @@ ZEROBASE - SEMIPROJECT
 ### release ver 0.0.2 (2024-05-27)
 - user get, post api
 - embeded H2 DataBase
+
+### release ver 0.0.3 (2024-06-07)
+- add CORS config
+- CommonError, Exception Handler, ControllerAdvice
+- UserEntity Update, MapStruct setting, simpleUserInsert

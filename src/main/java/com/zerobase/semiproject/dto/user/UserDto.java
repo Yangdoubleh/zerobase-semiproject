@@ -1,13 +1,30 @@
 package com.zerobase.semiproject.dto.user;
 
-public class UserDto {
-    private String loginId;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
-    public String getLoginId() {
-        return loginId;
+@Getter
+@Setter
+public class UserDto {
+
+    long userKey;
+    String email;
+    String nickname;
+    long year;
+    String name;
+    String phone;
+
+    @Builder
+    public UserDto(long userKey, String email, String nickname, long year, String name, String phone) {
+        this.userKey = userKey;
+        this.email = email;
+        this.nickname = nickname;
+        this.year = year;
+        this.name = name;
+        this.phone = phone;
     }
 
-    public void setLoginId(String loginId) {
-        this.loginId = loginId;
+    public UserDto() {
     }
 }
