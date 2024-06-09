@@ -1,6 +1,7 @@
-package com.zerobase.semiproject.user.exception;
+package com.zerobase.semiproject.exception;
 
-import com.zerobase.semiproject.user.exception.constant.UserExceptionCode;
+import com.zerobase.semiproject.exception.constant.UserExceptionCode;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +24,13 @@ public class ExceptionControllerAdvice {
         log.error("illegalExceptionHandler :: {}", e.getMessage());
 
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    }
+
+    @ExceptionHandler(EntityNotFoundException.class)
+    public ResponseEntity entityNotFoundExceptionHandler(EntityNotFoundException e) {
+        log.error("entityNotFoundExceptionHandler :: {}", e.getMessage());
+
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 
     @ExceptionHandler(Exception.class)

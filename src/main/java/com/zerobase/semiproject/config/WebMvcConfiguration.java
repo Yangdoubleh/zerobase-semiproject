@@ -1,4 +1,4 @@
-package com.zerobase.semiproject.user.config;
+package com.zerobase.semiproject.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -13,3 +13,8 @@ ZEROBASE - SEMIPROJECT
 - add CORS config
 - CommonError, Exception Handler, ControllerAdvice
 - UserEntity Update, MapStruct setting, simpleUserInsert
+
+### release ver 0.0.4 (2024-06-09)
+- add All Entity
+- add UserSelect
+- addException Handler

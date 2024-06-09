@@ -1,6 +1,6 @@
-package com.zerobase.semiproject.user.exception;
+package com.zerobase.semiproject.exception;
 
-import com.zerobase.semiproject.user.exception.constant.UserExceptionCode;
+import com.zerobase.semiproject.exception.constant.UserExceptionCode;
 
 public class UserException extends RuntimeException {
     public UserException() {

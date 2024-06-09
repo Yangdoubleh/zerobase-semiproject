@@ -1,4 +1,4 @@
-package com.zerobase.semiproject.user.exception.constant;
+package com.zerobase.semiproject.exception.constant;
 
 import org.springframework.http.HttpStatus;
 

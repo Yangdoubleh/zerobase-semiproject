@@ -1,7 +1,7 @@
-package com.zerobase.semiproject.mapper.user;
+package com.zerobase.semiproject.mapper;
 
-import com.zerobase.semiproject.dto.user.UserDto;
-import com.zerobase.semiproject.entity.user.UserEntity;
+import com.zerobase.semiproject.dto.UserDto;
+import com.zerobase.semiproject.entity.UserEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

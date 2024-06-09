@@ -1,12 +1,12 @@
-package com.zerobase.semiproject.mapper.user;
+package com.zerobase.semiproject.mapper;
 
-import com.zerobase.semiproject.dto.user.UserDto;
-import com.zerobase.semiproject.entity.user.UserEntity;
+import com.zerobase.semiproject.dto.UserDto;
+import com.zerobase.semiproject.entity.UserEntity;
 import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-06-07T09:57:12+0900",
+    date = "2024-06-09T09:22:06+0900",
     comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.6 (Oracle Corporation)"
 )
 public class UserMapperImpl implements UserMapper {

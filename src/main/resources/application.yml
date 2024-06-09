@@ -11,6 +11,9 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       ddl-auto: create-drop
     properties:
       hibernate:
@@ -18,7 +21,6 @@ spring:
         format_sql: true
         dialect: org.hibernate.dialect.H2Dialect
         show-sql: true
-
   h2:
     console:
       enabled: true
