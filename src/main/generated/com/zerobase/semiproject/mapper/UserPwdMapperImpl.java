@@ -2,11 +2,13 @@ package com.zerobase.semiproject.mapper;
 
 import com.zerobase.semiproject.dto.UserPwdDto;
 import com.zerobase.semiproject.entity.UserPwdEntity;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-06-09T09:44:38+0900",
+    date = "2024-06-10T10:15:56+0900",
     comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.6 (Oracle Corporation)"
 )
 public class UserPwdMapperImpl implements UserPwdMapper {
@@ -19,9 +21,11 @@ public class UserPwdMapperImpl implements UserPwdMapper {
 
         UserPwdEntity.UserPwdEntityBuilder userPwdEntity = UserPwdEntity.builder();
 
+        userPwdEntity.pwd( encryptSHA512( userPwdDto.getPwd() ) );
         userPwdEntity.userKey( userPwdDto.getUserKey() );
-        userPwdEntity.pwd( userPwdDto.getPwd() );
-        userPwdEntity.changeDt( userPwdDto.getChangeDt() );
+        if ( userPwdDto.getChangeDt() != null ) {
+            userPwdEntity.changeDt( LocalDateTime.parse( userPwdDto.getChangeDt() ) );
+        }
         userPwdEntity.userEntity( userPwdDto.getUserEntity() );
 
         return userPwdEntity.build();
@@ -37,7 +41,9 @@ public class UserPwdMapperImpl implements UserPwdMapper {
 
         userPwdDto.userKey( userPwdEntity.getUserKey() );
         userPwdDto.pwd( userPwdEntity.getPwd() );
-        userPwdDto.changeDt( userPwdEntity.getChangeDt() );
+        if ( userPwdEntity.getChangeDt() != null ) {
+            userPwdDto.changeDt( DateTimeFormatter.ISO_LOCAL_DATE_TIME.format( userPwdEntity.getChangeDt() ) );
+        }
         userPwdDto.userEntity( userPwdEntity.getUserEntity() );
 
         return userPwdDto.build();

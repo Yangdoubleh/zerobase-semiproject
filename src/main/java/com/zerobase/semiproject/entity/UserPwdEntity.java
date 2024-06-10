@@ -1,7 +1,16 @@
 package com.zerobase.semiproject.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "TB_USER_PWD")
@@ -17,7 +26,8 @@ public class UserPwdEntity {
     private String pwd;
 
     @Column(name = "CHANGE_DT")
-    private String changeDt;
+    @UpdateTimestamp
+    private LocalDateTime changeDt;
 
     @OneToOne(cascade = CascadeType.ALL)
     @MapsId
@@ -25,7 +35,7 @@ public class UserPwdEntity {
     private UserEntity userEntity;
 
     @Builder
-    public UserPwdEntity(long userKey, String pwd, String changeDt, UserEntity userEntity) {
+    public UserPwdEntity(long userKey, String pwd, LocalDateTime changeDt, UserEntity userEntity) {
         this.userKey = userKey;
         this.pwd = pwd;
         this.changeDt = changeDt;

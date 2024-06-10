@@ -6,7 +6,7 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-06-09T09:22:06+0900",
+    date = "2024-06-10T09:21:28+0900",
     comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.6 (Oracle Corporation)"
 )
 public class UserMapperImpl implements UserMapper {
@@ -19,12 +19,12 @@ public class UserMapperImpl implements UserMapper {
 
         UserEntity.UserEntityBuilder userEntity = UserEntity.builder();
 
+        userEntity.email( encryptAES256( userDto.getEmail() ) );
+        userEntity.name( encryptAES256( userDto.getName() ) );
+        userEntity.phone( encryptAES256( userDto.getPhone() ) );
         userEntity.userKey( userDto.getUserKey() );
-        userEntity.email( userDto.getEmail() );
         userEntity.nickname( userDto.getNickname() );
         userEntity.year( userDto.getYear() );
-        userEntity.name( userDto.getName() );
-        userEntity.phone( userDto.getPhone() );
 
         return userEntity.build();
     }
@@ -37,12 +37,12 @@ public class UserMapperImpl implements UserMapper {
 
         UserDto.UserDtoBuilder userDto = UserDto.builder();
 
+        userDto.email( decryptAES256( userEntity.getEmail() ) );
+        userDto.name( decryptAES256( userEntity.getName() ) );
+        userDto.phone( decryptAES256( userEntity.getPhone() ) );
         userDto.userKey( userEntity.getUserKey() );
-        userDto.email( userEntity.getEmail() );
         userDto.nickname( userEntity.getNickname() );
         userDto.year( userEntity.getYear() );
-        userDto.name( userEntity.getName() );
-        userDto.phone( userEntity.getPhone() );
 
         return userDto.build();
     }

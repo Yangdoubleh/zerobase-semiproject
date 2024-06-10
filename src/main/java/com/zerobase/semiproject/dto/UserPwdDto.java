@@ -5,13 +5,15 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 public class UserPwdDto {
-    long userKey;
-    String pwd;
-    String changeDt;
-    UserEntity userEntity;
+    public long userKey;
+    public String pwd;
+    public String changeDt;
+    public UserEntity userEntity;
 
     @Builder
     public UserPwdDto(long userKey, String pwd, String changeDt, UserEntity userEntity) {

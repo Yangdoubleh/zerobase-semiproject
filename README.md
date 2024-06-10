@@ -18,3 +18,10 @@ ZEROBASE - SEMIPROJECT
 - add All Entity
 - add UserSelect
 - addException Handler
+
+### release ver 0.0.5 (2024-06-10)
+- Add AES256 encrypt/decrypt
+- Add secret data encrypt/decrypt
+- Add SHA512 encrypt
+- Add password encrypt
+- Add password change_dt auto modified date insert

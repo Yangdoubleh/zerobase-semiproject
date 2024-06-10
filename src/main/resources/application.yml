@@ -35,3 +35,6 @@ logging:
   level:
     org.hibernate.SQL: debug
     org.hibernate.type: trace
+
+cipher:
+  aes256: ZEROBASE_AES_PRIVATE_KEY
