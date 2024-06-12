@@ -25,3 +25,9 @@ ZEROBASE - SEMIPROJECT
 - Add SHA512 encrypt
 - Add password encrypt
 - Add password change_dt auto modified date insert
+
+### release ver 0.0.6 (2024-06-12)
+- Add Jwt Token
+- Add Jwt Token Exception Handler
+- Add Jwt Refresh Token Entity
+- Login / Logout with Jwt Token(Access/Refresh)

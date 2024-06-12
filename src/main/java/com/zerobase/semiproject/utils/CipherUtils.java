@@ -1,4 +1,4 @@
-package com.zerobase.semiproject.config;
+package com.zerobase.semiproject.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -89,13 +89,5 @@ public class CipherUtils {
             log.error("SHA Cipher Encrypt Error :: {}", e.getMessage());
             return "";
         }
-    }
-
-    public static void main(String[] args) {
-        String str = "abc";
-        String encrypt = CipherUtils.encryptAES256(str);
-        System.out.println(encrypt);
-        System.out.println(CipherUtils.decryptAES256(encrypt));
-        System.out.println(CipherUtils.encryptSHA512(str));
     }
 }

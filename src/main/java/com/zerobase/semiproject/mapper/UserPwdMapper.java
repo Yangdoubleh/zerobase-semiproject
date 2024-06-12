@@ -1,6 +1,6 @@
 package com.zerobase.semiproject.mapper;
 
-import com.zerobase.semiproject.config.CipherUtils;
+import com.zerobase.semiproject.utils.CipherUtils;
 import com.zerobase.semiproject.dto.UserPwdDto;
 import com.zerobase.semiproject.entity.UserPwdEntity;
 import org.mapstruct.Mapper;

@@ -45,8 +45,12 @@ public class UserEntity {
     @OneToMany(mappedBy = "followee")
     private Set<FollowEntity> followees = new HashSet<>();
 
+    @OneToOne(mappedBy = "userEntity")
+    @PrimaryKeyJoinColumn
+    private UserJwtRefreshEntity userJwtRefreshEntity;
+
     @Builder
-    public UserEntity(long userKey, String email, String nickname, long year, String name, String phone, UserPwdEntity userPwd, Set<FollowEntity> followers, Set<FollowEntity> followees) {
+    public UserEntity(long userKey, String email, String nickname, long year, String name, String phone, UserPwdEntity userPwd, Set<FollowEntity> followers, Set<FollowEntity> followees, UserJwtRefreshEntity userJwtRefreshEntity) {
         this.userKey = userKey;
         this.email = email;
         this.nickname = nickname;
@@ -56,5 +60,6 @@ public class UserEntity {
         this.userPwd = userPwd;
         this.followers = followers;
         this.followees = followees;
+        this.userJwtRefreshEntity = userJwtRefreshEntity;
     }
 }

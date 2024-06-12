@@ -38,3 +38,6 @@ logging:
 
 cipher:
   aes256: ZEROBASE_AES_PRIVATE_KEY
+
+jwt:
+  privateKey: ZEROBASE_JWT_PRIVATE_KEY
